@@ -117,6 +117,7 @@ const Wrapper = styled.section`
       padding-top: 50px;
 
       h3 {
+        color: white;
         padding-bottom: 10px;
       }
     }
@@ -239,6 +240,10 @@ const Wrapper = styled.section`
     }
   }
   .formThree {
+    h3 {
+      padding-bottom: 10px;
+      color: white;
+    }
     .firstBtn {
       width: max-content;
       padding: 10px 40px;
@@ -327,6 +332,7 @@ const Wrapper = styled.section`
 
       h3 {
         padding-bottom: 10px;
+        color: white;
       }
     }
 
