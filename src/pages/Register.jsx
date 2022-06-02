@@ -161,7 +161,7 @@ const Register = () => {
                   </div>
                   <button
                     type='button'
-                    onClick={() => setFormStep(1)}
+                    onClick={() => setFormStep(formStep + 1)}
                     className='firstBtn'
                   >
                     Next
@@ -200,14 +200,14 @@ const Register = () => {
                   <div className='button_group'>
                     <button
                       type='button'
-                      onClick={() => setFormStep(0)}
+                      onClick={() => setFormStep(formStep - 1)}
                       className='prevBtn'
                     >
                       Previous
                     </button>
                     <button
                       type='button'
-                      onClick={() => setFormStep(2)}
+                      onClick={() => setFormStep(formStep + 1)}
                       className='firstBtn'
                     >
                       Next
@@ -247,7 +247,7 @@ const Register = () => {
                   <div className='button_group'>
                     <button
                       type='button'
-                      onClick={() => setFormStep(1)}
+                      onClick={() => setFormStep(formStep - 1)}
                       className='prevBtn'
                     >
                       Previous

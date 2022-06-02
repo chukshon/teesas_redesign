@@ -1,6 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import HomeHover from '../assets/images/navBar/home.png'
+import {
+  HomeHover,
+  Home,
+  Bookmark,
+  BookmarkHover,
+  Notification,
+  NotificationHover,
+  ParentConnect,
+  ParentConnectHover,
+  Profile,
+  ProfileHover,
+  SignOutHover,
+  SignOut,
+  Subscription,
+  SubscriptionHover,
+} from '../assets/images/navBar'
 
 import styled from 'styled-components'
 const NavMenu = () => {
@@ -9,50 +24,44 @@ const NavMenu = () => {
       <div className='container'>
         <li>
           <Link to={'/'} className='link'>
-            <img src={HomeHover} alt='' />
+            <img src={Home} alt='' />
             <span>Home</span>
           </Link>
         </li>
         <li>
           <Link to={'/'} className='link'>
-            <img src={HomeHover} alt='' />
-            <span>Home</span>
+            <img src={Bookmark} alt='' />
+            <span>Bookmark</span>
           </Link>
         </li>
         <li>
           <Link to={'/'} className='link'>
-            <img src={HomeHover} alt='' />
-            <span>Home</span>
+            <img src={Notification} alt='' />
+            <span>Notification</span>
           </Link>
         </li>
         <li>
           <Link to={'/'} className='link'>
-            <img src={HomeHover} alt='' />
-            <span>Home</span>
+            <img src={Profile} alt='' />
+            <span>Profile</span>
           </Link>
         </li>
         <li>
           <Link to={'/'} className='link'>
-            <img src={HomeHover} alt='' />
-            <span>Home</span>
+            <img src={ParentConnect} alt='' />
+            <span>ParentConnect</span>
           </Link>
         </li>
         <li>
           <Link to={'/'} className='link'>
-            <img src={HomeHover} alt='' />
-            <span>Home</span>
+            <img src={Subscription} alt='' />
+            <span>Subscription</span>
           </Link>
         </li>
         <li>
           <Link to={'/'} className='link'>
-            <img src={HomeHover} alt='' />
-            <span>Home</span>
-          </Link>
-        </li>
-        <li>
-          <Link to={'/'} className='link'>
-            <img src={HomeHover} alt='' />
-            <span>Home</span>
+            <img src={SignOut} alt='' />
+            <span>Sign out</span>
           </Link>
         </li>
       </div>
@@ -67,7 +76,7 @@ const UL = styled.ul`
     overflow-x: auto;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     ::-webkit-scrollbar {
       display: none;
     }
@@ -84,11 +93,13 @@ const UL = styled.ul`
     display: flex;
     align-items: center;
     gap: 1rem;
-    &:hover {
+
+    &:hover.active {
       background: white;
       color: black;
       padding: 10px 15px;
       border-radius: 20px;
+      font-size: 0.8rem;
     }
     img {
       width: 20px;
