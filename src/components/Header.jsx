@@ -43,21 +43,19 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to={''} className='nav-button'>
+              <Link to={'/'} className='nav-button'>
                 <button>
                   <FaSignInAlt />
                   <span>Login</span>
                 </button>
               </Link>
             </li>
-            <li>
-              <Link to={'/register'} className='nav-button'>
-                <button>
-                  <FaSignOutAlt />
-                  <span>Register</span>
-                </button>
-              </Link>
-            </li>
+            <Link to={'/register'} className='nav-button'>
+              <button>
+                <FaSignOutAlt />
+                <span>Register</span>
+              </button>
+            </Link>
           </ul>
         </nav>
       </div>
@@ -99,7 +97,7 @@ const HeaderNav = styled.header`
     top: 70px;
     left: 0;
     z-index: 999;
-    pointer-events: none;
+    /* pointer-events: none; */
     visibility: hidden;
     padding-block: 10px;
   }
@@ -125,6 +123,7 @@ const HeaderNav = styled.header`
     text-decoration: none;
   }
   button {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 0.4rem;
