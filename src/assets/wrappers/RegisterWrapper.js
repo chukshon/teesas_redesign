@@ -110,7 +110,7 @@ const Wrapper = styled.section`
     }
     .country_list li:hover {
       width: 100%;
-      background: red;
+      background: #2d9b19;
       cursor: pointer;
     }
     .options {
