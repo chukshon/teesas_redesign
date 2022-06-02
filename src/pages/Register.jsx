@@ -9,11 +9,19 @@ import Wrapper from '../assets/wrappers/RegisterWrapper'
 import PhoneField from '../components/PhoneField'
 import PasswordField from '../components/PasswordField'
 import { useForm } from 'react-hook-form'
+import axios from 'axios'
 
 const Register = () => {
-  const handleSubmit = (e) => {
+  const [created, setCreated] = useState('')
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('submit')
+    const { data } = await axios.post(
+      'https://run.mocky.io/v3/1a2eae07-997f-4edc-a756-563e3e4536e4'
+    )
+    setCreated('Account Created Successfully')
+    setTimeout(() => {
+      setCreated('')
+    }, 4000)
   }
 
   const [formStep, setFormStep] = useState(0)
@@ -260,6 +268,7 @@ const Register = () => {
                       Register
                     </button>
                   </div>
+                  <h1>{created}</h1>
                 </div>
               )}
             </form>
